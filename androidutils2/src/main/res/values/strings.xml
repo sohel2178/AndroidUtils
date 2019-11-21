@@ -2,6 +2,7 @@
     <string name="app_name">AndroidUtils</string>
     <string name="cancel">Cancel</string>
     <string name="ok">Ok</string>
+    <string name="yes">Yes</string>
 
     <string-array name="month_array">
         <item>Jan</item>
