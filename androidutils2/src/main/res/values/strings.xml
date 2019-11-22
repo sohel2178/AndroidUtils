@@ -1,8 +1,106 @@
 <resources>
-    <string name="app_name">AndroidUtils</string>
+    <string name="app_name">Construction Manager</string>
     <string name="cancel">Cancel</string>
     <string name="ok">Ok</string>
     <string name="yes">Yes</string>
+
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="prompt_company_name">Organization Name</string>
+    <string name="address">Address</string>
+    <string name="submit">Submit</string>
+    <string name="update">Update</string>
+    <string name="project_entry_form">Project Entry Form</string>
+    <string name="project_name">Project Name</string>
+    <string name="project_location">Project Location</string>
+    <string name="project_description">Project Description</string>
+    <string name="start_date">Start Date</string>
+    <string name="completion_date">Completion Date</string>
+    <string name="save">Save</string>
+    <string name="select_start_date">Select Start Date</string>
+    <string name="select_completion_date">Select Completion Date</string>
+    <string name="tasks">Tasks</string>
+    <string name="finance">Finance</string>
+    <string name="store">Store</string>
+    <string name="employees">Employees</string>
+    <string name="nid">NID</string>
+    <string name="designation">Designation</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="browse">browse</string>
+    <string name="add_worker">Add Worker</string>
+    <string name="add_employee">Add Employee</string>
+    <string name="attendance">Attendance</string>
+    <string name="select_attendance_date">Select Attendance Date</string>
+
+    <string name="prev"><![CDATA[<]]></string>
+    <string name="next"><![CDATA[>]]></string>
+    <string name="salary">Salary</string>
+    <string name="overtime">Overtime</string>
+    <string name="status">Status</string>
+    <string name="select_date_of_birth">Select Date of Birth</string>
+    <string name="delete">Delete</string>
+    <string name="download">Download</string>
+    <string name="attendance_entry">Attendance Entry</string>
+    <string name="create_new_task">Create New Task</string>
+    <string name="work_done">Workdone Entry</string>
+    <string name="gantt_chart">Gantt Chart</string>
+    <string name="finished_date">Finished Date</string>
+    <string name="duration">Duration</string>
+    <string name="volume_of_works">Volume of Works</string>
+    <string name="volume_of_works_done">Volume of Workdone</string>
+    <string name="task_name">Task Name</string>
+    <string name="unit_rate">Unit Rate</string>
+    <string name="unit">Unit</string>
+    <string name="detail">Detail</string>
+    <string name="edit">Edit</string>
+    <string name="select_finished_date">Select Finished Date</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="workdone_entry_form">Workdone Entry Form</string>
+    <string name="select_task">Select Task</string>
+    <string name="work_done_date">Wokrdone Date</string>
+    <string name="select_work_done_date">Select Workdone Date</string>
+    <string name="date">Date</string>
+    <string name="bar_chart">Bar Chart</string>
+    <string name="workdone_vs_time">Workdone VS Time</string>
+    <string name="daily_work_done_chart">Daily Workdone Chart</string>
+    <string name="employee">Employee</string>
+    <string name="create_new_account">Create New Accout</string>
+    <string name="account_name">Account Name</string>
+    <string name="transaction_date">Transaction Date</string>
+    <string name="purpose">Purpose</string>
+    <string name="invoice_no">Invoice No</string>
+    <string name="select_transaction_date">Select Transaction Date</string>
+    <string name="amount">Amount</string>
+    <string name="transaction_count">Transactions Count</string>
+    <string name="debit">Debit</string>
+    <string name="credit">Credit</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="report">Report</string>
+    <string name="cash_flow">Cash Flow</string>
+    <string name="create_supplier">Create Supplier</string>
+    <string name="supplied_material">supplied_material</string>
+
+
+    <string-array name="nav_texts">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Contact</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string-array name="account_type">
+        <item>Expense</item>
+        <item>Income</item>
+        <item>Both</item>
+    </string-array>
 
     <string-array name="month_array">
         <item>Jan</item>
