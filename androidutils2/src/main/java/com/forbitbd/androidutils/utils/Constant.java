@@ -23,4 +23,5 @@ public class Constant {
     public static final String TRANSACTION="TRANSACTION";
     public static final String POSITION="POSITION";
     public static final String SUPPLIER="SUPPLIER";
+    public static final String USER="USER";
 }
