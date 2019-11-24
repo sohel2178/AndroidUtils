@@ -308,13 +308,14 @@ public class PrebaseActivity extends AppCompatActivity {
 
     }
 
-    public String saveTaskFile(String projectName, String directory, ResponseBody responseBody){
+    public String saveTaskFile(String appName,String projectName, String directory, ResponseBody responseBody){
         String file = Environment.getExternalStorageDirectory().getPath()
-                + File.separator+getString(R.string.app_name)
+                + File.separator+appName
                 + File.separator+projectName
                 + File.separator+directory;
 
         String fileName = "Tasks.xlsx";
+
 
         return saveFile(file,fileName,responseBody);
     }
