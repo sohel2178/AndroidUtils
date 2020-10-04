@@ -90,7 +90,7 @@ public class MyUtil {
     }
 
     public static int getDuration(long fDate,long sDate){
-        long diff = Math.abs(fDate-sDate);
+        long diff = fDate-sDate;
         return (int) (TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)+1);
     }
 
@@ -122,6 +122,8 @@ public class MyUtil {
 
 
         return calendar.getTimeInMillis();
+
+
     }
 
     public static long getEndingTime(long time){
