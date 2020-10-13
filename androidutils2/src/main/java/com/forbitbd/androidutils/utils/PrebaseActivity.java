@@ -228,7 +228,9 @@ public class PrebaseActivity extends AppCompatActivity {
         target.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
         Uri uri = FileProvider.getUriForFile(this,
-                BuildConfig.APPLICATION_ID+".fileprovider",file);
+                getPackageName()+".fileprovider",file);
+
+
 
         target.setDataAndType(uri,"application/vnd.ms-excel");
 
@@ -309,6 +311,15 @@ public class PrebaseActivity extends AppCompatActivity {
     }
 
     public String saveTaskFile(String appName,String projectName, String directory,String fileName, ResponseBody responseBody){
+        String file = Environment.getExternalStorageDirectory().getPath()
+                + File.separator+appName
+                + File.separator+projectName
+                + File.separator+directory;
+
+        return saveFile(file,fileName,responseBody);
+    }
+
+    private String saveTransactionFile(String appName,String projectName, String directory,String fileName, ResponseBody responseBody ){
         String file = Environment.getExternalStorageDirectory().getPath()
                 + File.separator+appName
                 + File.separator+projectName
