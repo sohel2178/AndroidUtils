@@ -30,6 +30,9 @@ import androidx.fragment.app.FragmentManager;
 import com.forbitbd.androidutils.BuildConfig;
 import com.forbitbd.androidutils.R;
 import com.forbitbd.androidutils.ui.zoomImage.ZoomImageActivity;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -70,6 +73,14 @@ public class PrebaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        MobileAds.initialize(this);
+    }
+
+    public void setupBannerAd(int id){
+        AdView mAdView = findViewById(id);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
 
@@ -329,9 +340,9 @@ public class PrebaseActivity extends AppCompatActivity {
     }
 
 
-    public String saveMonthlyAttendanceFile(String projectName, String directoryName, ResponseBody responseBody, int year, int month) {
+    public String saveMonthlyAttendanceFile(String appName,String projectName, String directoryName, ResponseBody responseBody, int year, int month) {
         String file = Environment.getExternalStorageDirectory().getPath()
-                + File.separator+getString(R.string.app_name)
+                + File.separator+appName
                 + File.separator+projectName
                 + File.separator+directoryName;
         File dir = new File(file);
@@ -342,54 +353,9 @@ public class PrebaseActivity extends AppCompatActivity {
         String monthStr = getResources().getStringArray(R.array.month_array)[month];
         String fileName = monthStr+" - "+year+ ".xlsx";
 
-        File myFile = new File(file, fileName);
+        //File myFile = new File(file, fileName);
 
-
-        InputStream inputStream = null;
-        OutputStream outputStream = null;
-
-        try {
-            byte[] fileReader = new byte[4096];
-
-            long fileSize = responseBody.contentLength();
-
-
-            inputStream = responseBody.byteStream();
-            outputStream = new FileOutputStream(myFile);
-
-            while (true) {
-                int read = inputStream.read(fileReader);
-
-                if (read == -1) {
-                    break;
-                }
-
-                outputStream.write(fileReader, 0, read);
-
-            }
-
-            outputStream.flush();
-
-            return myFile.getPath();
-        } catch (IOException e) {
-            return null;
-        } finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            if (outputStream != null) {
-                try {
-                    outputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        return saveFile(file,fileName,responseBody);
     }
 
 
