@@ -88,6 +88,8 @@
     <string name="create_supplier">Create Supplier</string>
     <string name="supplied_material">supplied_material</string>
 
+    <string name="search_user">Search User</string>
+
 
     <string-array name="nav_texts">
         <item>Home</item>

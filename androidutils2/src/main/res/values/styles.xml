@@ -41,4 +41,12 @@
     </style>
 
 
+    <style name="WhiteCursorSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/arima_madurai_medium</item>
+    </style>
+
+
 </resources>

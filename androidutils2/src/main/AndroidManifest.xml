@@ -16,6 +16,10 @@
 
         <activity android:name=".ui.zoomImage.ZoomImageActivity"/>
 
+        <activity android:name=".ui.searchUser.SearchUserActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+
 
         <provider
             android:name="androidx.core.content.FileProvider"
