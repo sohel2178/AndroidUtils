@@ -11,6 +11,10 @@ public class SharedProject {
     private Permission employee;
 
     public SharedProject() {
+        this.activity = new Permission();
+        this.finance = new Permission();
+        this.store = new Permission();
+        this.employee = new Permission();
     }
 
     public String get_id() {
@@ -77,6 +81,13 @@ public class SharedProject {
 
 
         public Permission() {
+        }
+
+        public Permission(boolean read,boolean write,boolean update,boolean delete){
+            this.read =read;
+            this.write =write;
+            this.update =update;
+            this.delete =delete;
         }
 
         public boolean isRead() {
