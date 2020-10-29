@@ -69,7 +69,7 @@ public class SharedProject {
         this.employee = employee;
     }
 
-    class Permission{
+    public class Permission{
         private boolean read;
         private boolean write;
         private boolean update;
