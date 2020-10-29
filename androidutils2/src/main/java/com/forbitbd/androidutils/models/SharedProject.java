@@ -1,6 +1,8 @@
 package com.forbitbd.androidutils.models;
 
-public class SharedProject {
+import java.io.Serializable;
+
+public class SharedProject implements Serializable {
 
     private String _id;
     private Project project;
@@ -15,6 +17,14 @@ public class SharedProject {
         this.finance = new Permission();
         this.store = new Permission();
         this.employee = new Permission();
+    }
+
+    public SharedProject(Project project){
+        this.project= project;
+        this.activity = new Permission(true,true,true,true);
+        this.finance = new Permission(true,true,true,true);
+        this.store = new Permission(true,true,true,true);
+        this.employee = new Permission(true,true,true,true);
     }
 
     public String get_id() {
@@ -73,7 +83,7 @@ public class SharedProject {
         this.employee = employee;
     }
 
-    public class Permission{
+    public class Permission implements Serializable {
         private boolean read;
         private boolean write;
         private boolean update;
