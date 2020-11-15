@@ -53,6 +53,7 @@ public class MadView extends View {
 
     public void setRefrence(String refrence){
         this.refrence = refrence;
+        invalidate();
     }
 
     private void init(Context context){
@@ -67,6 +68,7 @@ public class MadView extends View {
 
     public void setStringList(List<String> stringList){
         this.stringList = stringList;
+        invalidate();
     }
 
     @Override
