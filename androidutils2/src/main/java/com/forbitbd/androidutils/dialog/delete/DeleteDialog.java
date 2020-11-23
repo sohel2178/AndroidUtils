@@ -24,11 +24,12 @@ import com.google.android.material.button.MaterialButton;
 public class DeleteDialog extends DialogFragment implements View.OnClickListener {
 
 
-    private TextView tvContent;
+    private TextView tvContent,tvTitle;
 
     private MaterialButton btnCancel,btnYes;
 
-    String content = "";
+    private String title = "";
+    private String content = "";
 
     private DialogClickListener listener;
 
@@ -43,6 +44,7 @@ public class DeleteDialog extends DialogFragment implements View.OnClickListener
         super.onCreate(savedInstanceState);
 
         content = getArguments().getString(Constant.CONTENT);
+        title = getArguments().getString(Constant.TITLE);
     }
 
     public void setListener(DialogClickListener listener){
@@ -67,14 +69,19 @@ public class DeleteDialog extends DialogFragment implements View.OnClickListener
     private void initView(View view) {
 
         tvContent = view.findViewById(R.id.content);
+        tvTitle = view.findViewById(R.id.title);
         btnCancel = view.findViewById(R.id.cancel);
         btnYes = view.findViewById(R.id.yes);
 
         btnCancel.setOnClickListener(this);
         btnYes.setOnClickListener(this);
 
-        if(content!=null){
+        if(content!=null && !content.equals("")){
             tvContent.setText(content);
+        }
+
+        if(title!=null && !title.equals("")){
+            tvTitle.setText(title);
         }
     }
 
