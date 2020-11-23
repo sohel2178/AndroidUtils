@@ -30,8 +30,10 @@ import androidx.fragment.app.FragmentManager;
 import com.forbitbd.androidutils.BuildConfig;
 import com.forbitbd.androidutils.R;
 import com.forbitbd.androidutils.ui.zoomImage.ZoomImageActivity;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -60,6 +62,8 @@ public class PrebaseActivity extends AppCompatActivity {
     private TextView tvTitle;
     private Toolbar toolbar;
 
+    private InterstitialAd mInterstitialAd;
+
 
     //private UserLocalStore userLocalStore;
 
@@ -75,12 +79,45 @@ public class PrebaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         MobileAds.initialize(this);
+
+        if(mInterstitialAd==null){
+            mInterstitialAd = new InterstitialAd(this);
+        }
+        mInterstitialAd.setAdUnitId(getString(R.string.inter_ad_unit));
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener(){
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+            }
+
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+                AppPreference.getInstance(getApplicationContext()).increaseCounter();
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                super.onAdLeftApplication();
+            }
+        });
     }
 
     public void setupBannerAd(int id){
         AdView mAdView = findViewById(id);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+    }
+
+    public void showInterAd(){
+        if(mInterstitialAd.isLoaded()){
+            mInterstitialAd.show();
+        }else{
+            AppPreference.getInstance(this).increaseCounter();
+        }
     }
 
 
