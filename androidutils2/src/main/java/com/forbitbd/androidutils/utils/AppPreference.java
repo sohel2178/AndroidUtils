@@ -26,12 +26,16 @@ public class AppPreference {
 
 
     public void increaseCounter(){
-        int prev = userLocalDatabase.getInt(COUNTER,1);
+        int prev = userLocalDatabase.getInt(COUNTER,0);
         prev++;
         userLocalDatabase.edit().putInt(COUNTER,prev).apply();
     }
 
     public int getCounter(){
-        return userLocalDatabase.getInt(COUNTER,1);
+        return userLocalDatabase.getInt(COUNTER,0);
+    }
+
+    public void resetCounter(){
+        userLocalDatabase.edit().putInt(COUNTER,0).apply();
     }
 }

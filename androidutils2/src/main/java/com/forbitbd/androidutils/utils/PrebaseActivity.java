@@ -96,7 +96,7 @@ public class PrebaseActivity extends AppCompatActivity {
             public void onAdClosed() {
                 super.onAdClosed();
                 mInterstitialAd.loadAd(new AdRequest.Builder().build());
-                AppPreference.getInstance(getApplicationContext()).increaseCounter();
+                AppPreference.getInstance(getApplicationContext()).resetCounter();
             }
 
             @Override
