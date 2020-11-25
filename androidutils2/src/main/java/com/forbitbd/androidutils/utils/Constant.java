@@ -2,6 +2,8 @@ package com.forbitbd.androidutils.utils;
 
 public class Constant {
 
+    public static final int COUNTER=10;
+
     public static final String PATH = "PATH";
     public static final String TITLE = "TITLE";
     public static final String TIME = "TIME";
@@ -24,4 +26,5 @@ public class Constant {
     public static final String POSITION="POSITION";
     public static final String SUPPLIER="SUPPLIER";
     public static final String USER="USER";
+
 }
