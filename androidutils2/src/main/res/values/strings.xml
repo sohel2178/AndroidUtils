@@ -119,11 +119,11 @@
         <item>Dec</item>
     </string-array>
 
-    <string name="inter_ad_unit">ca-app-pub-3940256099942544/1033173712</string>
+    <!--<string name="inter_ad_unit">ca-app-pub-3940256099942544/1033173712</string>-->
 
 <!--    <string name="banner_ad_unit">ca-app-pub-3940256099942544/6300978111</string>// Test-->
     <string name="banner_ad_unit">ca-app-pub-5474497946967422/9897074739</string>
-    <!--<string name="inter_ad_unit">ca-app-pub-5474497946967422/1779511602</string>-->
+    <string name="inter_ad_unit">ca-app-pub-5474497946967422/1779511602</string>
 
     <string name="app_id">ca-app-pub-5474497946967422~1756211908</string>
 </resources>

@@ -2,7 +2,7 @@ package com.forbitbd.androidutils.utils;
 
 public class Constant {
 
-    public static final int COUNTER=10;
+    public static final int COUNTER=30;
 
     public static final String PATH = "PATH";
     public static final String TITLE = "TITLE";
