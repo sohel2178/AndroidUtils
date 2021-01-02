@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -30,6 +31,8 @@ import androidx.fragment.app.FragmentManager;
 import com.forbitbd.androidutils.BuildConfig;
 import com.forbitbd.androidutils.R;
 import com.forbitbd.androidutils.ui.zoomImage.ZoomImageActivity;
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -162,9 +165,6 @@ public class PrebaseActivity extends AppCompatActivity {
             mProgressDialog.dismiss();
         }
     }
-
-
-
 
 
     public void openCropImageActivity(boolean square){
