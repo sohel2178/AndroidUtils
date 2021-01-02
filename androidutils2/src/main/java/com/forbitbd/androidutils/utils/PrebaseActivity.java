@@ -31,8 +31,6 @@ import androidx.fragment.app.FragmentManager;
 import com.forbitbd.androidutils.BuildConfig;
 import com.forbitbd.androidutils.R;
 import com.forbitbd.androidutils.ui.zoomImage.ZoomImageActivity;
-import com.getkeepsafe.taptargetview.TapTarget;
-import com.getkeepsafe.taptargetview.TapTargetView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
