@@ -28,7 +28,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 
 
-import com.forbitbd.androidutils.BuildConfig;
 import com.forbitbd.androidutils.R;
 import com.forbitbd.androidutils.ui.zoomImage.ZoomImageActivity;
 import com.google.android.gms.ads.AdListener;
